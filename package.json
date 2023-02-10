@@ -32,8 +32,6 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
-    "@types/chrome": "^0.0.212",
-    "@types/firefox-webext-browser": "^109.0.0",
     "@types/jest": "^29.4.0",
     "@types/node": "16",
     "@types/webextension-polyfill": "^0.10.0",
