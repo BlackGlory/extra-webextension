@@ -1,4 +1,4 @@
-import 'webextension-polyfill'
+import browser from 'webextension-polyfill'
 
 export async function downloadBlob(
   blob: Blob
@@ -7,7 +7,7 @@ export async function downloadBlob(
 ): Promise<void> {
   const url = URL.createObjectURL(blob)
   try {
-    const options: browser.downloads._DownloadOptions = { url }
+    const options: browser.Downloads.DownloadOptionsType = { url }
     if (typeof filename !== 'undefined') {
       options.filename = filename
     }
