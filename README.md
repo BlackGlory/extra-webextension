@@ -21,3 +21,13 @@ class LocalStorage<Storage extends Record<string, any>> {
   clear(): Promise<void>
 }
 ```
+
+### SessionStorage
+```ts
+class SessionStorage<Storage extends Record<string, any>> {
+  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key]>
+  setItem<Key extends keyof Storage>(key: Key, value: Storage[Key]): Promise<void>
+  removeItem<Key extends keyof Storage>(key: Key): Promise<void>
+  clear(): Promise<void>
+}
+```
