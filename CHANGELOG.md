@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/BlackGlory/extra-webextension/compare/v0.2.2...v0.2.3) (2023-02-20)
+
+
+### Features
+
+* add `sessionStorage` ([471ffe6](https://github.com/BlackGlory/extra-webextension/commit/471ffe600af7f78fb89803628bdad3caf65d191f))
+
 ### [0.2.2](https://github.com/BlackGlory/extra-webextension/compare/v0.2.1...v0.2.2) (2023-02-20)
 
 ### [0.2.1](https://github.com/BlackGlory/extra-webextension/compare/v0.2.0...v0.2.1) (2023-02-20)
