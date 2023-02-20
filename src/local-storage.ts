@@ -1,6 +1,6 @@
 import browser from 'webextension-polyfill'
 
-export class LocalStorage<Storage extends Record<string, unknown>> {
+export class LocalStorage<Storage extends Record<string, any>> {
   async getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key]> {
     const result = await browser.storage.local.get(
       key as string
