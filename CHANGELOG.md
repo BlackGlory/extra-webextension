@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/BlackGlory/extra-webextension/compare/v0.2.3...v0.3.0) (2023-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* - CommonJS => ESM.
+- The minimal version of Node.js v16.
+
+### Features
+
+* add `waitForLaunch` ([1c58c88](https://github.com/BlackGlory/extra-webextension/commit/1c58c88062dd35dcb583872a2c460112a4afcf62))
+
+
+* commonjs => esm ([513297d](https://github.com/BlackGlory/extra-webextension/commit/513297de73943e59db8228d84ead0333eed9b3e8))
+
 ### [0.2.3](https://github.com/BlackGlory/extra-webextension/compare/v0.2.2...v0.2.3) (2023-02-20)
 
 
