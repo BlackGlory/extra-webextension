@@ -31,3 +31,24 @@ class SessionStorage<Storage extends Record<string, any>> {
   clear(): Promise<void>
 }
 ```
+
+### waitForLaunch
+```ts
+enum LaunchReason {
+  Install
+, Update
+, Enable
+, Activate
+}
+
+type LaunchDetails =
+| { reason: LaunchReason.Install }
+| {
+    reason: LaunchReason.Update
+    previousVersion: string
+  }
+| { reason: LaunchReason.Enable }
+| { reason: LaunchReason.Activate }
+
+function waitForLaunch(): Promise<LaunchDetails>
+```
