@@ -1,3 +1,3 @@
-export * from './get-active-tab'
-export * from './local-storage'
-export * from './session-storage'
+export * from './get-active-tab.js'
+export * from './local-storage.js'
+export * from './session-storage.js'
