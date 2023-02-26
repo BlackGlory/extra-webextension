@@ -20,7 +20,7 @@
     "prepare": "ts-patch install -s",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet src",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --passWithNoTests --config jest.config.cjs",
-    "prepublishOnly": "run-s clean build",
+    "prepublishOnly": "run-s prepare clean build",
     "clean": "rimraf lib",
     "build": "tsc --project tsconfig.build.json",
     "release": "standard-version"
