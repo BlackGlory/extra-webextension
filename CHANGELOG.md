@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/BlackGlory/extra-webextension/compare/v0.3.0...v0.3.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* waitForLaunch ([caf1510](https://github.com/BlackGlory/extra-webextension/commit/caf1510522bdd5564613d7f13364cdda56a5271b))
+
 ## [0.3.0](https://github.com/BlackGlory/extra-webextension/compare/v0.2.3...v0.3.0) (2023-02-26)
 
 
