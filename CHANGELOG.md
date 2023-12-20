@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/BlackGlory/extra-webextension/compare/v0.3.2...v0.4.0) (2023-12-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v16 => Node.js v18.17.0
+* Changed the signature of `getActieTab`
+
+* remove webextension-polyfill ([cdfa8f8](https://github.com/BlackGlory/extra-webextension/commit/cdfa8f8e901ff1e2a11faa9690e998918affb4d4))
+* upgrade dependencies ([aebb2cc](https://github.com/BlackGlory/extra-webextension/commit/aebb2cc6116d55aa967d8b728bbb8202d4ec6d81))
+
 ### [0.3.2](https://github.com/BlackGlory/extra-webextension/compare/v0.3.1...v0.3.2) (2023-06-11)
 
 
