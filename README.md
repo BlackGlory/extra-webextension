@@ -9,7 +9,7 @@ yarn add extra-webextension
 ## API
 ### getActiveTab
 ```ts
-function getActiveTab(): Promise<browser.tabs.Tab>
+function getActiveTab(): Promise<chrome.tabs.Tab>
 ```
 
 ### LocalStorage

@@ -39,7 +39,6 @@
     "@types/chrome": "^0.0.217",
     "@types/jest": "^29.4.0",
     "@types/node": "16",
-    "@types/webextension-polyfill": "^0.10.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "cross-env": "^7.0.3",
@@ -60,7 +59,6 @@
   },
   "dependencies": {
     "@blackglory/prelude": "^0.3.1",
-    "extra-promise": "^6.0.6",
-    "webextension-polyfill": "^0.10.0"
+    "extra-promise": "^6.0.6"
   }
 }

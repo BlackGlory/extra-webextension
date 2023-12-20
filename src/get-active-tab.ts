@@ -1,8 +1,6 @@
-import browser from 'webextension-polyfill'
-
-export async function getActiveTab(): Promise<browser.Tabs.Tab> {
-  const currentWindow = await browser.windows.getCurrent()
-  const tabs = await browser.tabs.query({
+export async function getActiveTab(): Promise<chrome.tabs.Tab> {
+  const currentWindow = await chrome.windows.getCurrent()
+  const tabs = await chrome.tabs.query({
     active: true
   , windowId: currentWindow.id
   })

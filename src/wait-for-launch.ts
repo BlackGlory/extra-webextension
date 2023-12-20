@@ -1,4 +1,3 @@
-import browser from 'webextension-polyfill'
 import { assert } from '@blackglory/prelude'
 import { SessionStorage } from './session-storage.js'
 import { timeout, TimeoutError } from 'extra-promise'
@@ -20,8 +19,8 @@ export type LaunchDetails =
 | { reason: LaunchReason.Activate }
 
 // 确保事件监听器在模块导入时就被注册.
-const installDetailsPromise = new Promise<browser.Runtime.OnInstalledDetailsType>(resolve => {
-  browser.runtime.onInstalled.addListener(resolve)
+const installDetailsPromise = new Promise<chrome.runtime.InstalledDetails>(resolve => {
+  chrome.runtime.onInstalled.addListener(resolve)
 })
 
 export async function waitForLaunch(): Promise<LaunchDetails> {
