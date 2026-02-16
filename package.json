@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "@blackglory/prelude": "^0.3.4",
-    "extra-promise": "^6.0.8"
+    "extra-promise": "^6.0.8",
+    "extra-utils": "^5.20.0"
   }
 }
