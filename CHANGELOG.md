@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/BlackGlory/extra-webextension/compare/v0.4.0...v0.5.0) (2026-02-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v18 => Node.js v22
+* **local-storage, session-storage:** Changed return value types of `LocalStorage#getItem`, `SessionStorage#getItem`.
+
+### Features
+
+* **local-storage, session-storage:** improve types ([03dfea5](https://github.com/BlackGlory/extra-webextension/commit/03dfea5c58dec1a17fe8d4e65cb68f1ab253b850))
+
+
+### Bug Fixes
+
+* **get-active-tab:** handle a very vary edge case ([5d19610](https://github.com/BlackGlory/extra-webextension/commit/5d19610f4c37c5e38bfe8e3bd7d4727bbfefc086))
+
+
+* upgrade dependencies ([bb0bf58](https://github.com/BlackGlory/extra-webextension/commit/bb0bf5844fe36281bd44602c2ea3031c7e9a22a3))
+
 ## [0.4.0](https://github.com/BlackGlory/extra-webextension/compare/v0.3.2...v0.4.0) (2023-12-20)
 
 
