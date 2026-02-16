@@ -14,8 +14,8 @@ function getActiveTab(): Promise<chrome.tabs.Tab>
 
 ### LocalStorage
 ```ts
-class LocalStorage<Storage extends Record<string, any>> {
-  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key]>
+class LocalStorage<Storage extends Record<string, unknown>> {
+  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key] | undefined>
   setItem<Key extends keyof Storage>(key: Key, value: Storage[Key]): Promise<void>
   removeItem<Key extends keyof Storage>(key: Key): Promise<void>
   clear(): Promise<void>
@@ -24,8 +24,8 @@ class LocalStorage<Storage extends Record<string, any>> {
 
 ### SessionStorage
 ```ts
-class SessionStorage<Storage extends Record<string, any>> {
-  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key]>
+class SessionStorage<Storage extends Record<string, unknown>> {
+  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key] | undefined>
   setItem<Key extends keyof Storage>(key: Key, value: Storage[Key]): Promise<void>
   removeItem<Key extends keyof Storage>(key: Key): Promise<void>
   clear(): Promise<void>

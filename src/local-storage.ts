@@ -1,8 +1,12 @@
-export class LocalStorage<Storage extends Record<string, any>> {
-  async getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key]> {
-    const result = await chrome.storage.local.get(
-      key as string
-    ) as Pick<Storage, Key>
+import { assert, isString } from '@blackglory/prelude'
+
+export class LocalStorage<Storage extends Record<string, unknown>> {
+  async getItem<Key extends keyof Storage>(
+    key: Key
+  ): Promise<Storage[Key] | undefined> {
+    assert(isString(key))
+
+    const result = await chrome.storage.local.get(key) as Pick<Storage, Key>
     
     return result[key]
   }
@@ -11,10 +15,14 @@ export class LocalStorage<Storage extends Record<string, any>> {
     key: Key
   , value: Storage[Key]
   ): Promise<void> {
-    await chrome.storage.local.set({ [key]: value })
+    await chrome.storage.local.set({
+      [key]: value
+    })
   }
 
   async removeItem<Key extends keyof Storage>(key: Key): Promise<void> {
+    assert(isString(key))
+
     await chrome.storage.local.remove(key as string)
   }
 
