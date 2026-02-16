@@ -7,7 +7,10 @@ export class LocalStorage<Storage extends Record<string, any>> {
     return result[key]
   }
 
-  async setItem<Key extends keyof Storage>(key: Key, value: Storage[Key]): Promise<void> {
+  async setItem<Key extends keyof Storage>(
+    key: Key
+  , value: Storage[Key]
+  ): Promise<void> {
     await chrome.storage.local.set({ [key]: value })
   }
 
