@@ -6,7 +6,7 @@ export class SessionStorage<Storage extends Record<string, unknown>> {
   ): Promise<Storage[Key] | undefined> {
     assert(isString(key))
 
-    const result = await chrome.storage.session.get(key) as Pick<Storage, Key>
+    const result = await chrome.storage.session.get(key) as Partial<Pick<Storage, Key>>
     
     return result[key]
   }
