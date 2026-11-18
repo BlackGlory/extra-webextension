@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/BlackGlory/extra-webextension/compare/v0.5.1...v0.5.2) (2026-11-18)
+
+
+### Features
+
+* **storage:** improve types ([37a8962](https://github.com/BlackGlory/extra-webextension/commit/37a896202c16f2d107c9225401f800ad225a623b))
+
 ### [0.5.1](https://github.com/BlackGlory/extra-webextension/compare/v0.5.0...v0.5.1) (2026-11-18)
 
 
