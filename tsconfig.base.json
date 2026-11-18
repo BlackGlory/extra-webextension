@@ -7,15 +7,12 @@
   , "esModuleInterop": true
   , "noUnusedLocals": true
   , "noUnusedParameters": true
-  , "baseUrl": "."
+  , "rootDir": "src"
+  , "types": ["*"]
   , "paths": {
-      "@src/*": ["src/*"]
-    , "@utils/*": ["src/utils/*"]
-    , "@test/*": ["__tests__/*"]
+      "@utils/*": ["./src/utils/*"]
+    , "@src/*": ["./src/*"]
+    , "@test/*": ["./__tests__/*"]
     }
-  , "plugins": [
-      { "transform": "typescript-transform-paths" }
-    , { "transform": "typescript-transform-paths", "afterDeclarations": true }
-    ]
   }
 }
