@@ -7,6 +7,25 @@ yarn add extra-webextension
 ```
 
 ## API
+```ts
+interface IStorage<Structure extends Record<string, unknown>> {
+  getItem<Key extends keyof Structure>(
+    key: Key
+  ): Promise<Structure[Key] | undefined>
+
+  setItem<Key extends keyof Structure>(
+    key: Key
+  , value: Structure[Key]
+  ): Promise<void>
+
+  removeItem<Key extends keyof Structure>(
+    key: Key
+  ): Promise<void>
+
+  clear(): Promise<void>
+}
+```
+
 ### getActiveTab
 ```ts
 function getActiveTab(): Promise<chrome.tabs.Tab>
@@ -14,22 +33,16 @@ function getActiveTab(): Promise<chrome.tabs.Tab>
 
 ### LocalStorage
 ```ts
-class LocalStorage<Storage extends Record<string, unknown>> {
-  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key] | undefined>
-  setItem<Key extends keyof Storage>(key: Key, value: Storage[Key]): Promise<void>
-  removeItem<Key extends keyof Storage>(key: Key): Promise<void>
-  clear(): Promise<void>
-}
+class LocalStorage<
+  Structure extends Record<string, unknown>
+> implements IStorage<Structure>
 ```
 
 ### SessionStorage
 ```ts
-class SessionStorage<Storage extends Record<string, unknown>> {
-  getItem<Key extends keyof Storage>(key: Key): Promise<Storage[Key] | undefined>
-  setItem<Key extends keyof Storage>(key: Key, value: Storage[Key]): Promise<void>
-  removeItem<Key extends keyof Storage>(key: Key): Promise<void>
-  clear(): Promise<void>
-}
+class SessionStorage<
+  Structure extends Record<string, unknown>
+> implements IStorage<Structure>
 ```
 
 ### waitForLaunch

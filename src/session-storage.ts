@@ -1,26 +1,27 @@
 import { assert, isString } from '@blackglory/prelude'
+import { IStorage } from './types.js'
 
-export class SessionStorage<Storage extends Record<string, unknown>> {
-  async getItem<Key extends keyof Storage>(
+export class SessionStorage<Structure extends Record<string, unknown>> implements IStorage<Structure> {
+  async getItem<Key extends keyof Structure>(
     key: Key
-  ): Promise<Storage[Key] | undefined> {
+  ): Promise<Structure[Key] | undefined> {
     assert(isString(key))
 
-    const result = await chrome.storage.session.get(key) as Partial<Pick<Storage, Key>>
+    const result = await chrome.storage.session.get(key) as Partial<Pick<Structure, Key>>
     
     return result[key]
   }
 
-  async setItem<Key extends keyof Storage>(
+  async setItem<Key extends keyof Structure>(
     key: Key
-  , value: Storage[Key]
+  , value: Structure[Key]
   ): Promise<void> {
     await chrome.storage.session.set({
       [key]: value
     })
   }
 
-  async removeItem<Key extends keyof Storage>(key: Key): Promise<void> {
+  async removeItem<Key extends keyof Structure>(key: Key): Promise<void> {
     assert(isString(key))
 
     await chrome.storage.session.remove(key)
