@@ -69,7 +69,7 @@ class SessionStorage<
 
 #### StorageWithMemoryCache
 ```ts
-class StorageWithMemoryCache<Structure extends Record<string, unknown>> {
+class StorageWithMemoryCache<Structure extends Record<string, unknown>> implements IStorage<Structure> {
   constructor(private storage: IStorage<Structure>)
 }
 ```

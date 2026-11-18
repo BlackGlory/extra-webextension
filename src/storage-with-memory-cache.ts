@@ -1,6 +1,6 @@
 import { IStorage } from './types.js'
 
-export class StorageWithMemoryCache<Structure extends Record<string, unknown>> {
+export class StorageWithMemoryCache<Structure extends Record<string, unknown>> implements IStorage<Structure> {
   private cache = new Map<
     keyof Structure
   , Structure[keyof Structure] | undefined
