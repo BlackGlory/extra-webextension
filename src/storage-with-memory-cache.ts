@@ -1,7 +1,7 @@
 import { IStorage } from './types.js'
 
 export class StorageWithMemoryCache<Structure extends Record<string, unknown>> implements IStorage<Structure> {
-  private cache = new Map<
+  protected cache = new Map<
     keyof Structure
   , Structure[keyof Structure] | undefined
   >()
@@ -31,9 +31,7 @@ export class StorageWithMemoryCache<Structure extends Record<string, unknown>> i
     await this.storage.setItem(key, value)
   }
 
-  async removeItem<Key extends keyof Structure>(
-    key: Key
-  ): Promise<void> {
+  async removeItem(key: keyof Structure): Promise<void> {
     this.cache.set(key, undefined)
 
     await this.storage.removeItem(key)

@@ -21,7 +21,7 @@ export class LocalStorage<Structure extends Record<string, unknown>> implements 
     })
   }
 
-  async removeItem<Key extends keyof Structure>(key: Key): Promise<void> {
+  async removeItem(key: keyof Structure): Promise<void> {
     assert(isString(key))
 
     await chrome.storage.local.remove(key)

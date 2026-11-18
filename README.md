@@ -45,9 +45,7 @@ interface IStorage<Structure extends Record<string, unknown>> {
   , value: Structure[Key]
   ): Promise<void>
 
-  removeItem<Key extends keyof Structure>(
-    key: Key
-  ): Promise<void>
+  removeItem(key: keyof Structure): Promise<void>
 
   clear(): Promise<void>
 }
@@ -70,6 +68,6 @@ class SessionStorage<
 #### StorageWithMemoryCache
 ```ts
 class StorageWithMemoryCache<Structure extends Record<string, unknown>> implements IStorage<Structure> {
-  constructor(private storage: IStorage<Structure>)
+  constructor(storage: IStorage<Structure>)
 }
 ```

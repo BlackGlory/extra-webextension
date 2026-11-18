@@ -21,7 +21,7 @@ export class SessionStorage<Structure extends Record<string, unknown>> implement
     })
   }
 
-  async removeItem<Key extends keyof Structure>(key: Key): Promise<void> {
+  async removeItem(key: keyof Structure): Promise<void> {
     assert(isString(key))
 
     await chrome.storage.session.remove(key)
