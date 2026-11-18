@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/BlackGlory/extra-webextension/compare/v0.5.0...v0.5.1) (2026-11-18)
+
+
+### Features
+
+* add `IStorage` ([bf47abb](https://github.com/BlackGlory/extra-webextension/commit/bf47abb498080367d866328c424474b11101489a))
+* add `StorageWithMemoryCache` ([cae54d7](https://github.com/BlackGlory/extra-webextension/commit/cae54d7fbb85dc1e479d9b217277961d51f6da0f))
+
 ## [0.5.0](https://github.com/BlackGlory/extra-webextension/compare/v0.4.0...v0.5.0) (2026-02-16)
 
 
